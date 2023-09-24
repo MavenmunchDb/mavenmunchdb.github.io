@@ -5,7 +5,7 @@ $(document).ready(function () {
         $('#dataTable').DataTable({
             data: data, // Assuming data is an array of objects
             columns: [
-                { data: 'food_item' },
+                { data: 'item' },
                 { data: 'place' },
                 { data: 'rating' }
             ]
