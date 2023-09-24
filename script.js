@@ -5,9 +5,9 @@ $(document).ready(function () {
         $('#dataTable').DataTable({
             data: data, // Assuming data is an array of objects
             columns: [
-                { data: 'Name' },
-                { data: 'Age' },
-                { data: 'Email' }
+                { data: 'food_item' },
+                { data: 'place' },
+                { data: 'rating' }
             ]
         });
     });
