@@ -1,0 +1,25 @@
+name: Build URL
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-url:
+    runs-on: ubuntu-latest
+
+    env:
+      BASE_URL: ${{ github.event.inputs.GETDISHES }}
+      SUBSCRIPTION_KEY: ${{ secrets.SUBSCRIPTION_KEY }}
+
+    steps:
+      - name: Build URL
+        id: build-url
+        run: |
+          echo "Building URL..."
+          FINAL_URL="$BASE_URL/api/data?subscription_key=$SUBSCRIPTION_KEY"
+          echo "::set-env name=FINAL_URL::$FINAL_URL"
+        
+      - name: Display URL
+        run: echo "Final URL is $FINAL_URL"
