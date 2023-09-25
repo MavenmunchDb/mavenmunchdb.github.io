@@ -20,7 +20,7 @@ jobs:
         run: |
           echo "Building URL..."
           FINAL_URL="$BASE_URL/api/data?subscription_key=$SUBSCRIPTION_KEY"
-          echo "::set-env name=FINAL_URL::$FINAL_URL"
+          echo "name=FINAL_URL::$FINAL_URL"
         
       - name: Display URL
         run: echo "Final URL is $FINAL_URL"
