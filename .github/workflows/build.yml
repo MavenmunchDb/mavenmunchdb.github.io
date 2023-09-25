@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      BASE_URL: https://script.google.com/macros/s/
+      BASE_URL: https://script.google.com/macros/s
       SUBSCRIPTION_KEY: ${{ secrets.SUBSCRIPTION_KEY }}
       DB_ID: ${{ secrets.DB_ID }}
 
