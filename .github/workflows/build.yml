@@ -20,7 +20,7 @@ jobs:
         run: |
           echo "Building URL..."
           FINAL_URL="$BASE_URL/$DB_ID/exec?path=dishes-table&subscription_key=$SUBSCRIPTION_KEY"
-          echo "name=FINAL_URL::$FINAL_URL"
+          echo "::set-output name=FINAL_URL::$FINAL_URL"
         
       - name: Display URL
         run: echo "Final URL is $FINAL_URL"
