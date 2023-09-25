@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      BASE_URL: ${{ github.event.inputs.GETDISHES }}
+      BASE_URL: https://script.google.com/macros/s/
       SUBSCRIPTION_KEY: ${{ secrets.SUBSCRIPTION_KEY }}
       DB_ID: ${{ secrets.DB_ID }}
 
@@ -19,7 +19,7 @@ jobs:
         id: build-url
         run: |
           echo "Building URL..."
-          FINAL_URL="$BASE_URL/api/data?subscription_key=$SUBSCRIPTION_KEY"
+          FINAL_URL="$BASE_URL/$DB_ID/exec?path=dishes-table&subscription_key=$SUBSCRIPTION_KEY"
           echo "name=FINAL_URL::$FINAL_URL"
         
       - name: Display URL
