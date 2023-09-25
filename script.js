@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // Make a REST API call to retrieve JSON data
     $.ajax({
-        url: process.env.FINAL_URL,
+        url: 'https://script.google.com/macros/s/AKfycbzlBsu7t_UJyh97_NpZV0bbuN0rquLOaP4XwVXfIqpQn0UhIqWh5nn6tRJhZ31VODbxIg/exec?path=dishes-table&subscription_key=jqZiBkxZayNRgQZpEU8ZlYF3EgNZRbJ3HY24bi',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
