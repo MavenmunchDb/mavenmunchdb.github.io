@@ -7,11 +7,11 @@ $(document).ready(function () {
         success: function (data) {
             // Initialize DataTable
             $('#dataTable').DataTable({
-                data: data.data,
+                data: data,
                 columns: [
                     { data: 'item' },
                     { data: 'place' },
-                    { data: 'rating' }
+                    { data: 'item_rating' }
                 ]
             });
         },
