@@ -21,6 +21,10 @@
 
                 <label for="rating">Rating (1-10):</label>
                 <input type="text" name="rating[]" min="1" max="10" required>
+
+                <label for="item-description">Description:</label>
+                <input type="text" name="item-description[]" required>
+
                 <button type="button" class="remove-field">Remove</button>
             </div>
         </div>
@@ -34,6 +38,9 @@
 
                 <label for="service-rating">Service Rating:</label>
                 <input type="text" id="service-rating" name="service" >
+
+                <label for="place-description">Description:</label>
+                <input type="text" name="place-description" >
             </div>
         <button type="submit">Submit</button>
     </form>
@@ -49,17 +56,20 @@
             // Get all the dynamic "Name" and "Rating" fields
             const nameFields = document.querySelectorAll('input[name="name[]"]');
             const ratingFields = document.querySelectorAll('input[name="rating[]"]');
+            const descriptionFields = document.querySelectorAll('input[name="item-description[]"]');
 
             // Loop through the dynamic fields and create JSON objects
             for (let i = 0; i < nameFields.length; i++) {
                 const nameValue = nameFields[i].value;
                 const ratingValue = ratingFields[i].value;
+                const descriptionValue = ratingFields[i].value;
 
                 // Create a JSON object for each pair
                 const dataObject = {
                     "item": nameValue,
                     "place": placeValue,
-                    "rating": ratingValue
+                    "rating": ratingValue,
+                    "item_description": descriptionValue
                 };
 
                 itemsData.push(dataObject);
@@ -68,14 +78,16 @@
             // Convert itemsData to JSON string
             const itemsDataString = JSON.stringify(itemsData);
         //Convert place-details to json object
-        const locationValue = document.getElementById('place-input').value;
+        const locationValue = document.getElementById('place-location').value;
             const arValue = document.getElementById('ambience-rating').value;
             const srValue = document.getElementById('service-rating').value;
+            const placeDescriptionValue  = document.getElementById('place-description').value;
             const placesData = {
                 "place": placeValue,
                 "location": locationValue,
                 "ambience_rating": arValue,
-                "service_rating": srValue
+                "service_rating": srValue,
+                "place_description": placeDescriptionValue
             };
             const placesDataJson = JSON.stringify(placesData); 
             // Send data to the flow
@@ -123,6 +135,7 @@
 
             newField.querySelector('input[name="name[]"]').value = '';
             newField.querySelector('input[name="rating[]"]').value = '';
+            newField.querySelector('input[name="item-description[]"]').value = '';
 
             dynamicFields.appendChild(newField);
         });
