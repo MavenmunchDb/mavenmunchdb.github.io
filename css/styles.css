@@ -22,12 +22,11 @@ nav a {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 ul {
   list-style-type: none;
+  padding-inline-start: 0px;
 }
 
 .items-card {
@@ -36,6 +35,44 @@ ul {
   padding: 10px;
   margin-bottom: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.item {
+  font-size: 24px;
+  margin-top: 12px;
+  margin-bottom: 2px;
+}
+
+.place {
+  margin-top: 10px;
+}
+
+.rating {
+  display: flex;
+  line-height: 32px;
+}
+
+.number {
+  font-size: 24px;
+}
+
+.star-icon {
+  font-size: 18px;
+  color: #bf052b;
+  vertical-align: middle;
+  margin-left: 3px;
+  margin-right: 6px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+#search-bar {
+  padding: 8px;
+  width: 200px;
+  font-size: 16px;
 }
 
 /* Grid layout for desktop */
