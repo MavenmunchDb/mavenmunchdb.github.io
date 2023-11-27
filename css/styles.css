@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -13,6 +13,7 @@ nav {
 
 nav a {
   color: white;
+  font-weight: 500;
   text-decoration: none;
   padding: 10px;
   margin: 0 10px;
@@ -36,16 +37,19 @@ ul {
   margin-bottom: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: white;
+  font-size: 18px;
 }
 
 .item {
-  font-size: 24px;
+  font-weight: 600;
   margin-top: 12px;
   margin-bottom: 2px;
 }
 
 .place {
   margin-top: 10px;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .rating {
@@ -54,7 +58,7 @@ ul {
 }
 
 .number {
-  font-size: 24px;
+  font-weight: 600;
 }
 
 .star-icon {
@@ -73,6 +77,31 @@ ul {
   padding: 8px;
   width: 200px;
   font-size: 16px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #f2f2f2; /* Light gray background */
+  }
+  50% {
+    background-color: #e0e0e0; /* Slightly darker gray */
+  }
+  100% {
+    background-color: #f2f2f2; /* Back to light gray */
+  }
+}
+
+.item-loading,
+.place-loading,
+.rating-loading {
+  height: 24px;
+  background-color: #f7f7f7;
+}
+/* Apply loading class to the items-card during loading state */
+.item-loading,
+.place-loading,
+.rating-loading {
+  animation: pulse 1.5s infinite; /* Same pulse animation */
 }
 
 /* Grid layout for desktop */
