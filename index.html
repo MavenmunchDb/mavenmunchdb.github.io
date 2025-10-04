@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Redirecting to new site</title>
+    <!-- Redirecting to another page using meta tag -->
+    <meta http-equiv="refresh" content="5; url =https://mavenmunchdb.github.io/mmdb-home/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,30 +19,4 @@
     />
     <title>MMDB</title>
   </head>
-
-  <body>
-    <nav>
-      <a href="#">Wiki</a>
-    </nav>
-    <div class="items-section">
-      <div class="search-container">
-        <input type="text" id="search-bar" placeholder="search" />
-      </div>
-      <script src="./modules/styles/loading.js"></script>
-      <ul id="items-list">
-        <script src="./modules/retrieve_items/retrieve_items.js"></script>
-        <li>
-          <div class="items-card">
-            <p class="item-loading"></p>
-            <p class="place-loading"></p>
-            <div class="rating-loading">
-              <span class="number-loading"></span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <script src="./modules/search/search.js"></script>
-  </body>
 </html>
